@@ -30,6 +30,8 @@ function addIsOpen(event) {
     refs.overlay.addEventListener('click', removeIsOpen);
     refs.closeBtn.addEventListener('click', removeIsOpen);
     refs.galleryList.removeEventListener('click', addIsOpen);
+    document.body.style.overflow = "hidden"; // ADD THIS LINE
+    document.body.style.height = "100%"; // ADD THIS LINE
 };
 
 function removeIsOpen(event) {
@@ -40,6 +42,8 @@ function removeIsOpen(event) {
     refs.lightbox.classList.remove('is-open');
     refs.bigImg.src = '';
     refs.bigImg.alt = '';
+    document.body.style.overflow = ""; // ADD THIS LINE
+    document.body.style.height = "";
 };
 
 function checkKeyboardEvent(event) {
