@@ -1,24 +1,14 @@
-import photos from './gallery-items.js';
 
-const refs = {
-    galleryList: document.querySelector('.js-gallery'),
-    lightbox: document.querySelector('.js-lightbox'),
-    closeBtn: document.querySelector('[data-action="close-lightbox"]'),
-    bigImg: document.querySelector('.lightbox__image'),
-    galleryItem: document.querySelector('.js-gallery_image'),
-    overlay: document.querySelector('.lightbox__overlay'),
-}
 
-refs.galleryList.addEventListener('click', addIsOpen);
 
-function makeListElements(array) {
-    const itemOfGallery = array.map(({preview, description}) =>
-        `<li class="gallery__item"><img class="js-gallery_image gallery__image" src="${preview}" alt="${description}"></li>`
-    ).join('')
-    return itemOfGallery;
-};
 
-refs.galleryList.innerHTML = `${makeListElements(photos)}`;
+
+
+
+
+
+
+
 
 function addIsOpen(event) {
     if (event.target.nodeName !== 'IMG') {
